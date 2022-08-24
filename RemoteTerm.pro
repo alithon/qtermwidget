@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -35,7 +35,8 @@ SOURCES += \
     lib/qtermwidget.cpp \
     lib/tools.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    remoteterm.cpp
 
 HEADERS += \
     config.h \
@@ -72,7 +73,8 @@ HEADERS += \
     lib/qtermwidget_version.h \
     lib/qtermwidget_version.h.in \
     lib/tools.h \
-    mainwindow.h
+    mainwindow.h \
+    remoteterm.h
 
 FORMS += \
     lib/SearchBar.ui \
