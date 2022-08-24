@@ -7,6 +7,8 @@ CONFIG += c++11
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
+DEFINES += HAVE_POSIX_OPENPT
+# DEFINES += KB_LAYOUT_DIR=\"/usr/local/share/qtermwidget5/kb-layouts\"
 
 SOURCES += \
     lib/BlockArray.cpp \
@@ -36,6 +38,7 @@ SOURCES += \
     mainwindow.cpp
 
 HEADERS += \
+    config.h \
     lib/BlockArray.h \
     lib/Character.h \
     lib/CharacterColor.h \
@@ -65,6 +68,8 @@ HEADERS += \
     lib/kptydevice.h \
     lib/kptyprocess.h \
     lib/qtermwidget.h \
+    lib/qtermwidget_export.h \
+    lib/qtermwidget_version.h \
     lib/qtermwidget_version.h.in \
     lib/tools.h \
     mainwindow.h

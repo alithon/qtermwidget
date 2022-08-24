@@ -33,6 +33,7 @@
 #include "SearchBar.h"
 #include "qtermwidget.h"
 
+
 #ifdef Q_OS_MACOS
 // Qt does not support fontconfig on macOS, so we need to use a "real" font name.
 #define DEFAULT_FONT_FAMILY                   "Menlo"
@@ -41,6 +42,9 @@
 #endif
 
 #define STEP_ZOOM 1
+
+const char* TRANSLATIONS_DIR = "/usr/local/share/qtermwidget5/translations";
+
 
 using namespace Konsole;
 

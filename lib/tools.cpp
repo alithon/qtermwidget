@@ -1,4 +1,5 @@
 #include "tools.h"
+#include "config.h"
 
 #include <QCoreApplication>
 #include <QDir>
@@ -16,7 +17,9 @@ QString get_kb_layout_dir()
 //    qDebug() << __FILE__ << __FUNCTION__;
 
     QString rval = QString();
-    QString k(QLatin1String(KB_LAYOUT_DIR));
+    // QString k(QLatin1String(KB_LAYOUT_DIR));
+    QString k = KB_LAYOUT_DIR;
+
     QDir d(k);
 
     //qDebug() << "default KB_LAYOUT_DIR: " << k;
@@ -62,7 +65,8 @@ const QStringList get_color_schemes_dirs()
 //    qDebug() << __FILE__ << __FUNCTION__;
 
     QStringList rval;
-    QString k(QLatin1String(COLORSCHEMES_DIR));
+    // QString k(QLatin1String(COLORSCHEMES_DIR));
+    QString k = COLORSCHEMES_DIR;
     QDir d(k);
 
 //    qDebug() << "default COLORSCHEMES_DIR: " << k;
